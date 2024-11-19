@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botón con imagen encima</title>
+  <style>
+    /* Estilo del cuerpo y fondo */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('brooke.jpg'); /* Cambia esta URL por tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh; /* La página ocupa toda la ventana */
+      display: flex; /* Flexbox para centrar */
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Contenedor del botón e imagen */
+    .contenedor-boton {
+      display: flex;
+      flex-direction: column; /* Coloca la imagen y el botón en columna */
+      align-items: center; /* Centra horizontalmente */
+    }
+
+    /* Imagen encima del botón */
+    .imagen-icono {
+      width: 300px; /* Aumenta el tamaño de la imagen */
+      height: auto; /* Mantén las proporciones */
+      margin-bottom: 20px; /* Espacio entre la imagen y el botón */
+    }
+
+    /* Estilo del botón */
+    .boton {
+      background-color: rgba(0, 123, 255, 0.9); /* Color con transparencia */
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: rgba(0, 86, 179, 0.9);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .boton:active {
+      background-color: rgba(0, 70, 140, 0.9);
+      transform: translateY(1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor-boton">
+    <!-- Imagen encima del botón -->
+    <img src="concurso.png" alt="Ícono grande" class="imagen-icono">
+    <!-- Botón centrado -->
+    <button class="boton" onclick="window.location.href='index.html';">
+      Registrarse
+    </button>
+  </div>
+</body>
+</html>
